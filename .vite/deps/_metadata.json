@@ -1,0 +1,35 @@
+{
+  "hash": "b8e8ead0",
+  "browserHash": "0288880f",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "b2279695",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4bd1ccf1",
+      "needsInterop": true
+    },
+    "particles-bg": {
+      "src": "../../node_modules/particles-bg/dist/index.es.js",
+      "file": "particles-bg.js",
+      "fileHash": "9a696db5",
+      "needsInterop": false
+    },
+    "react-parallax-tilt": {
+      "src": "../../node_modules/react-parallax-tilt/dist/index.esm.js",
+      "file": "react-parallax-tilt.js",
+      "fileHash": "96e10dcc",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-QSQYAWSL": {
+      "file": "chunk-QSQYAWSL.js"
+    }
+  }
+}
