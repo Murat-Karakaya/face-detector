@@ -70,35 +70,31 @@ class App extends Component{
   }
 
   onButtonSubmit=()=>{
-    fetch("http://localhost:5172/imageUrl", {
+    fetch("https://face-detector-backend.onrender.com/imageUrl", {
       method: "post",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
-          input: this.state.input
+        email: this.state.user.email,
+        name: this.state.user.name,
+        id: this.state.user.id,
+        input: this.state.input
       })
       })
       .then(response => response.json())
-      .then(response => response.outputs[0].data.regions.map(face => face.region_info.bounding_box))
+      .then(response => {
+        this.setState(Object.assign(this.state.user, { entries: response.entries}))
+        console.log(response)
+        return response.data.outputs[0].data.regions.map(face => face.region_info.bounding_box)
+      })
       .then((d) => {
         this.setState({isInputValid: true})
         this.settingBox(this.calculateFaceLocation(d))
-        
-        fetch("http://localhost:5172/image", {
-          method: "put",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({
-              id: this.state.user.id
-          })
-        })
-          .then((response) => response.json())
-          .then((rank) => {
-            this.setState(Object.assign(this.state.user, { entries: rank}))
-          })
       })
-      .catch(() => this.setState({isInputValid: false}))
+      .catch((err) => {
+        console.log(err)
+        this.setState({isInputValid: false})
+      })
   }
-
-
 
   onRouteChange = (order) => {
     if (order === "sign in") {

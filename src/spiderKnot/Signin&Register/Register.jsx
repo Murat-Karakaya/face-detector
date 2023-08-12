@@ -9,8 +9,7 @@ const Register = ({loadUser, onRouteChange}) => {
         if (!name || !email || !password) {
             return;
         }
-        //console.log("name: ", name, ", email: ", email, ", password: ", password);
-        fetch("http://localhost:5172/register", {
+        fetch("https://face-detector-backend.onrender.com/register", {
             method: "post",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -28,6 +27,8 @@ const Register = ({loadUser, onRouteChange}) => {
         });
     }
     return(
+        <>
+        <h2 className="BigFormTitle">Register</h2>
         <div className="formContainer">
         <div className="form register">
             <p className="formP">Name</p>
@@ -60,6 +61,7 @@ const Register = ({loadUser, onRouteChange}) => {
             <p className="formparagraf">Already have an account? <strong onClick={() => onRouteChange("sign in")}>Sign In</strong></p>
         </div>
         </div>
+        </>
     );
  
 }

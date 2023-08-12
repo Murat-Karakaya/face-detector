@@ -3,10 +3,13 @@
   padding: 2rem;
 }
 
-nav h2{
-  scale: 1.5;
-  margin-bottom: 0;
+.BigFormTitle{
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
 }
+
 strong{
   cursor: pointer;
   text-decoration: underline;
@@ -14,6 +17,22 @@ strong{
 
 strong:hover{
   color: #00000050;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbutton{
+  text-decoration: underline;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.navbutton:hover{
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .form{

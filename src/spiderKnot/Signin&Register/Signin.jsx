@@ -8,7 +8,7 @@ const Signin = ({loadUser, onRouteChange}) => {
         if (!email || !password) {
             return;
         }
-        fetch("http://localhost:5172/signin", {
+        fetch("https://face-detector-backend.onrender.com/signin", {
             method: "post",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -27,6 +27,8 @@ const Signin = ({loadUser, onRouteChange}) => {
         });
     }
     return(
+        <>
+        <h2 className="BigFormTitle">Sign In</h2>
         <div className="formContainer">
         <div className="form signIn">
             <p className="formP">Email</p>
@@ -51,6 +53,7 @@ const Signin = ({loadUser, onRouteChange}) => {
             <p className="formparagraf">Don't have an account? <strong onClick={() => onRouteChange("register")}>Register</strong></p>
         </div>
         </div>
+        </>
     );
  
 }
