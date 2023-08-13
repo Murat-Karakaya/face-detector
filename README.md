@@ -3,7 +3,7 @@ This site is live on [here](https://face-detector-e2hi.onrender.com/). Yay! When
 
 Note: Your account will be deleted from my database at a maximum of 90 days after your account is created. This is because I use a free version of render.com
 
-Note: A friend of mine hacked this website using CSRF attack. So I fixed that isue. Let's hope we are safe now 😅
+Note: [Esat-Karakaya](https://github.com/Esat-Karakaya) hacked this website using CSRF attack. So I fixed that isue. Let's hope we are safe now 😅
 
 ## Contribute
 
