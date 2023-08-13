@@ -8,9 +8,7 @@ Note: A friend of mine hacked this website using CSRF attack. So I fixed that is
 ## Contribute
 
 ### Don't worry
-Don't worry, I won't bite if you mess it up. Unless you somehow **Delete This Repo** then I WILL BITE.
-
-Jokes aside. It's ok if you mess it up. I make mistakes all day :)
+Don't worry, feel free to make mistakes. ;)
 
 ### Let's start
 1. to contribute, fork this repository.
@@ -73,9 +71,9 @@ In your contribute folder, you are free to make any changes you want. **Go wild*
 
 6. Make a pull request, And I will go over the changes.
 
-Ta daa => Hopefully I'll love them so much that I change my website.
+Congrats! => Hopefully I'll love them so much that I change my website.
 
-### Don't know anything about what I am talking about?
+### Don't know anything what I am talking about?
 
 Maybe don't try to contribute this site :)
 Instead try to contribute [this project](https://github.com/zero-to-mastery/start-here-guidelines) there you'll get an idea of what I am talking about ;D
