@@ -77,8 +77,6 @@ Ta daa => Hopefully I'll love them so much that I change my website.
 ### Don't know anything about what I am talking about?
 
 Maybe don't try to contribute this site :)
-Instead try to contribute [this project](https://github.com/zero-to-mastery/start-here-guidelines) there youll get an idea of what I am talking about ;D
-
-OR
-
+Instead try to contribute [this project](https://github.com/zero-to-mastery/start-here-guidelines) there you'll get an idea of what I am talking about ;D
+#### OR
 Start an issue, explain me what went wrong when you were trying to contribute face-detector
