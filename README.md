@@ -8,7 +8,8 @@ Note: A friend of mine hacked this website using CSRF attack. So I fixed that is
 ## Contribute
 
 ### Don't worry
-Don't worry, I won't bite if you mess it up. Unless you somehow ** Delete This Repo ** then I WILL BITE
+Don't worry, I won't bite if you mess it up. Unless you somehow **Delete This Repo** then I WILL BITE.
+
 Jokes aside. It's ok if you mess it up. I make mistakes all day :)
 
 ### Let's start
