@@ -1,9 +1,9 @@
 # face-detector
-This site is live on [here](https://face-detector-e2hi.onrender.com/). Yay! When you go to this site it wants you to register.DON'T use your real name, DON'T use your real email, and I DON'T recomend using a password that you already used on a different site. Altough your password is protected by hash. Your name and email is not. so for those use something silly like: "Unnamed Person" and "i_love_patetos@burger.tomato"
+This site is live on [here](https://face-detector-e2hi.onrender.com/). Yay!
 
 Note: Your account will be deleted from my database at a maximum of 90 days after your account is created. This is because I use a free version of render.com
-
 Note: [Esat-Karakaya](https://github.com/Esat-Karakaya) hacked this website using CSRF attack. So I fixed that isue. Let's hope we are safe now 😅
+Note: I made an update. So this website works much faster now.
 
 ## Contribute
 
@@ -75,7 +75,8 @@ Congrats! => Hopefully I'll love them so much that I change my website.
 
 ### Don't know anything what I am talking about?
 
-Maybe don't try to contribute this site :)
-Instead try to contribute [this project](https://github.com/zero-to-mastery/start-here-guidelines) there you'll get an idea of what I am talking about ;D
+It's fine. You don't have to contribute this site :).
+
+Instead you can try to contribute [this project](https://github.com/zero-to-mastery/start-here-guidelines) there, you'll get an idea of what I am talking about ;D
 #### OR
 Start an issue, explain me what went wrong when you were trying to contribute face-detector
