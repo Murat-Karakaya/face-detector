@@ -3,11 +3,13 @@ import React, {useState} from "react";
 const Signin = ({loadUser, onRouteChange}) => {
     let [password, setPassword] = useState("");
     let [email, setEmail] = useState("");
+    let [loading, setLoading] = useState(false);
 
     const onSubmit = () => {
-        if (!email || !password) {
+        if (!email.includes("@") || !password) {
             return;
         }
+        setLoading(false)
         fetch("https://face-detector-backend.onrender.com/signin", {
             method: "post",
             headers: {"Content-Type": "application/json"},
@@ -20,11 +22,14 @@ const Signin = ({loadUser, onRouteChange}) => {
         .then((data) => {
             if (data.id) {
                 loadUser(data);
+                setLoading(false);
                 onRouteChange("home page");
             } else {
                 alert(data);
+                setLoading(false);
             }
-        });
+        })
+        .catch((err) => (alert("Sorry! wrong email or password."), setLoading(false)))
     }
     return(
         <>
@@ -51,6 +56,13 @@ const Signin = ({loadUser, onRouteChange}) => {
                 <input onClick={onSubmit} className="cool-btn" type="submit" value="Sign In" /> 
             </div>
             <p className="formparagraf">Don't have an account? <strong onClick={() => onRouteChange("register")}>Register</strong></p>
+            <div style={{display: loading ? "block" : "none"}}>
+                <div className="loading-container">
+                    <div className="loading-blue"></div>
+                    <div className="loading-pink"></div>
+                </div>
+                <p className="formparagraf">processing...</p>
+            </div>
         </div>
         </div>
         </>
