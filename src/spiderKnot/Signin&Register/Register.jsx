@@ -4,11 +4,13 @@ const Register = ({loadUser, onRouteChange}) => {
     let [password, setPassword] = useState("");
     let [name, setName] = useState("");
     let [email, setEmail] = useState("");
+    let [loading, setLoading] = useState(false);
 
     const onRegister = () => {
-        if (!name || !email || !password) {
+        if (!name || !email.includes("@") || !password) {
             return;
         }
+        setLoading(true)
         fetch("https://face-detector-backend.onrender.com/register", {
             method: "post",
             headers: {"Content-Type": "application/json"},
@@ -22,9 +24,14 @@ const Register = ({loadUser, onRouteChange}) => {
         .then((data) => {
             if (data.id) {
                 loadUser(data);
+                setLoading(false);
                 onRouteChange("home page");
+                return
             }
-        });
+            alert("An account with that email allready exists");
+            setLoading(false);
+        })
+        .catch((err) => (alert("An account with that email allready exists"), setLoading(false)))
     }
     return(
         <>
@@ -59,6 +66,13 @@ const Register = ({loadUser, onRouteChange}) => {
                 <input onClick={onRegister} className="cool-btn" type="submit" value="Register" /> 
             </div>
             <p className="formparagraf">Already have an account? <strong onClick={() => onRouteChange("sign in")}>Sign In</strong></p>
+            <div style={{display: loading ? "block" : "none"}}>
+                <div className="loading-container">
+                    <div className="loading-blue"></div>
+                    <div className="loading-pink"></div>
+                </div>
+                <p className="formparagraf">processing...</p>
+            </div>
         </div>
         </div>
         </>

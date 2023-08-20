@@ -5,7 +5,7 @@
 
 .BigFormTitle{
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5vh;
   margin-bottom: 10px;
   font-size: 2.5rem;
 }
@@ -41,19 +41,12 @@ nav {
   align-items: center;
   box-shadow: 5px 10px 18px #888888;
   backdrop-filter: blur(10px);
+  padding: 5px;
   /*background-size:80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;*/
   width: 320px;
   border-radius: 7px;
   display: block;
-}
-
-.signIn{
-  height: 250px;
-}
-
-.register{
-  height: 315px;
 }
 
 .formInput{
@@ -92,6 +85,10 @@ nav {
 
 .formparagraf{
   text-align: center;
+}
+
+.informUsers{
+  width: 60vw;
 }
 
 .faceContainer{
@@ -141,13 +138,11 @@ nav {
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
 }
 
-.btn-container
-{
+.btn-container{
   perspective: 400px;
 }
 
-.cool-btn
-{
+.cool-btn{
   display: block;
   margin: 10px 0;
   width: 100px;
@@ -175,4 +170,37 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   cursor: pointer;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.loading-pink {
+  height: 1em;
+  width: 1em;
+  background-color: rgb(230, 0, 225);
+  animation: processing-pink 1.3s infinite linear;
+}
+
+@keyframes processing-pink {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.loading-blue {
+  height: 1em;
+  width: 1em;
+  background-color: rgb(1, 150, 235);
+  animation: processing-blue 1.3s infinite linear;
+}
+
+@keyframes processing-blue {
+  100% {
+    transform: rotate(360deg);
+  }
 }

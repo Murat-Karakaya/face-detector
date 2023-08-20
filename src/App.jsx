@@ -8,13 +8,14 @@ import Logo from './spiderKnot/logo/Logo';
 import ImageLinkForm from './spiderKnot/imageLinkForm/ImageLinkForm';
 import Rank from './spiderKnot/rank/Rank';
 import FaceRecognition from './spiderKnot/FaceRecognition/FaceRecognition.jsx';
+import InformUser from './spiderKnot/informUser/InformUser';
 
 const initialState = {
   input: "",
   isInputValid: true,
   notDisplayFaceBoundingBox: true,
   box: [{notdisplay: true}],
-  route: "sign in",
+  route: "inform user",
   user: {
     id: "",
     name: "",
@@ -28,6 +29,23 @@ class App extends Component{
   constructor() {
     super();
     this.state = initialState;
+  }
+
+  resetUser = () => {
+    this.setState({
+      input: "",
+      isInputValid: true,
+      notDisplayFaceBoundingBox: true,
+      box: [{notdisplay: true}],
+      user: {
+        id: "",
+        name: "",
+        email: "",
+        entries: 0,
+        joined: ""
+        }
+      }
+    )
   }
 
   loadUser = (data) => {
@@ -97,12 +115,10 @@ class App extends Component{
   }
 
   onRouteChange = (order) => {
-    if (order === "sign in") {
+    if (order != "home page") {
       this.setState(initialState)
-    } else {
-      this.setState({route: order})  
     }
-    
+    this.setState({route: order})  
   }
 
   render () {
@@ -128,7 +144,7 @@ class App extends Component{
           </>
           :(this.state.route === "sign in"
             ?<Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-            :<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+            :(this.state.route === "register" ? <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} /> : <InformUser onRouteChange={this.onRouteChange} />)
           )
         }
       </>

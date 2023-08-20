@@ -15,11 +15,14 @@ const Navigation = ({onRouteChange, route}) => {
             </nav>
         );
     }
-    return(
-        <nav>
-            <p onClick={() => onRouteChange("sign in")} className="navbutton">Sign In</p>
-        </nav>
-    );
+    if (route === "register") {
+        return(
+            <nav>
+                <p onClick={() => onRouteChange("sign in")} className="navbutton">Sign In</p>
+            </nav>
+        );    
+    }
+    
 }
 
 export default Navigation;
