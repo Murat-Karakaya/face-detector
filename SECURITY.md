@@ -16,4 +16,4 @@ I made it pretty secure . But saddly I did not used any kind of captcha .
 
 ## Reporting a Vulnerability
 
-go [here](https://github.com/Murat-Karakaya/face-detector/security/advisories).
+If you find a vulnerability go [here](https://github.com/Murat-Karakaya/face-detector/security/advisories).
