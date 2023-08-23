@@ -9,7 +9,7 @@ const Signin = ({loadUser, onRouteChange}) => {
         if (!email.includes("@") || !password) {
             return;
         }
-        setLoading(false)
+        setLoading(true)
         fetch("https://face-detector-backend.onrender.com/signin", {
             method: "post",
             headers: {"Content-Type": "application/json"},
